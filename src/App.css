@@ -1,0 +1,198 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* <-- end reset */
+
+body {
+  font-size: 20px;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  background: papayawhip;
+}
+
+h1,
+h2 {
+  display: block;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+  margin-left: 0.5em;
+  background: none;
+}
+
+input[type="number"] {
+  width: 4em;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  list-style-type: decimal;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  padding: 0.2em 1em;
+}
+
+.shopping button {
+  box-sizing: border-box;
+  vertical-align: middle;
+  height: 1.5em;
+  margin-bottom: 0.2em;
+  border-radius: 0.2em;
+  border: none;
+  padding: 0 0.2em;
+}
+
+.shopping .bought {
+  border: 2px solid green;
+}
+
+.bought .check {
+  color: green;
+}
