@@ -17,6 +17,9 @@ const processData = data => {
   const ret = {};
   for (let i = 1; i < lines.length; ++i) {
     const items = lines[i].split("\t");
+    if (items.length < 2) {
+      continue;
+    }
     ret[items[0].trim()] = {
       name: items[1].trim(),
       tags: trimList(items[2]),
@@ -35,7 +38,10 @@ const setSearch = params => {
 
 const setParam = (key, value) => {
   const newParams = new URLSearchParams(history.location.search);
-  newParams.set(key, value);
+  newParams.set(
+    key,
+    typeof value === "boolean" ? Math.abs(String(value).indexOf("f")) : value
+  );
   setSearch(newParams);
 };
 
@@ -54,15 +60,16 @@ export default () => {
   // Handle query params
   useEffect(() => {
     const params = new URLSearchParams(history.location.search);
-    setSeed(params.get("s") || createSeed());
     setReqAmount(Number(params.get("a") || 0));
+    setKidsOnly(params.get("k") === "1");
+    setVegOnly(params.get("v") === "1");
+    setSeed(params.get("s") || createSeed());
+    setReady(true);
   }, []);
 
-  // Init seed once available
   useEffect(
     () => {
       if (seed) {
-        setReady(true);
         setParam("s", seed);
       }
     },
@@ -70,21 +77,40 @@ export default () => {
   );
 
   // Fetch data
-  useEffect(() => {
-    fetch("data.tsv")
-      .then(resp => resp.text())
-      .then(data => {
-        const dbData = processData(data);
-        setDb(dbData);
-        setIds(Object.keys(dbData));
-      });
-  }, []);
+  useEffect(
+    () => {
+      if (!ready) {
+        return;
+      }
+      fetch("data.tsv")
+        .then(resp => resp.text())
+        .then(data => {
+          const dbData = processData(data);
+          setDb(dbData);
+        });
+    },
+    [ready]
+  );
 
   useEffect(
     () => {
       setParam("a", reqAmount);
     },
     [reqAmount]
+  );
+
+  useEffect(
+    () => {
+      setParam("k", kidsOnly);
+    },
+    [kidsOnly]
+  );
+
+  useEffect(
+    () => {
+      setParam("v", vegOnly);
+    },
+    [vegOnly]
   );
 
   // Filter ids
@@ -178,7 +204,7 @@ export default () => {
         </button>
       </label>
       <label>
-        Vain lapsille:
+        Lapsiystävällinen:
         <input
           type="checkbox"
           checked={kidsOnly}

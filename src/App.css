@@ -125,17 +125,28 @@ table {
 
 /* <-- end reset */
 
+:root {
+  --main-color: #100d28;
+  --main-bg: white;
+  --accent-color: #285b8e;
+}
+
 body {
-  font-size: 20px;
+  font-family: "Oxygen", sans-serif;
+  font-size: 21px;
   padding: 1rem;
   padding-bottom: 5rem;
-  background: papayawhip;
+  line-height: 1.2;
+
+  background: var(--main-bg);
+  color: var(--main-color);
 }
 
 h1,
 h2 {
   display: block;
   font-weight: 700;
+  color: var(--accent-color);
 }
 
 h1 {
@@ -146,7 +157,7 @@ h1 {
 h2 {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 input {
@@ -157,12 +168,16 @@ input {
 }
 
 input[type="number"] {
-  width: 4em;
+  width: 3.5em;
+  height: 1.8rem;
+  border: 0.1em solid var(--accent-color);
+  padding-left: 0.4em;
 }
 
 label {
-  display: block;
+  display: flex;
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 ol {
@@ -173,20 +188,27 @@ ol {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font: inherit;
-  color: inherit;
+  color: var(--accent-color);
+  height: 2.2rem;
+  width: 4rem;
   background: none;
-  padding: 0.2em 1em;
+  border: 0.1em solid var(--accent-color);
 }
 
 .shopping button {
+  display: inline-block;
+  width: auto;
   box-sizing: border-box;
-  vertical-align: middle;
   height: 1.5em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.1em;
   border-radius: 0.2em;
   border: none;
   padding: 0 0.2em;
+  color: var(--main-color);
 }
 
 .shopping .bought {

@@ -3,14 +3,26 @@ id	name	tags	diet	ingredients
 2	Spagetti & mifunese	c	k	mifu,spagetti,tomaattimurska,sipuli
 3	Hampurilaiset	c		hampurilaissämpylä,hampurilaispihvi,hampurilaistäytteet
 4	Hodarit	c		hodarisämpylä,hodarimakkara,hodaritäytteet
-5	Kasvissosekeitto		k	kasvikset sosekeittoon
+5	Kasvissosekeitto		ve	kasvikset sosekeittoon
 6	Kanaa & riisiä	c		kanaa,riisiä,kasviksia
 7	Pitsa	c		pitsapohja,tomaattipyree,pitsajuusto,pitsan täytteet
 8	Nakkikeitto	c		nakit,keittojuurekset,liemikuutio,peruna
 9	Pelmenit	c		pelmenit,liemikuutio
 10	Lohimedaljongit			lohimedaljongit,ruohosipulia,ranskankermaa,sitruunamehua,peruna
 11	Jauhelihakeitto	c		jauheliha,liemikuutio,keittojuurekset,peruna
-12	Lihamakaronilaatikko			jauheliha,makaroni,maito,juusto,kananmuna,sipuli
+12	Lihamakaronilaatikko	c		jauheliha,makaroni,maito,juusto,kananmuna,sipuli
 13	Kalapuikot & perunamuusi			kalapuikot,peruna
 14	Riisiä & papuja		ve	riisiä,papuja,kasviksia
 15	Tapaksia			erikoisjuustoja,artisokansydämiä,juustokeksejä,rypäleitä
+16	Jauhelihapihvit & perunamuusi	c		jauheliha,sipuli,peruna
+17	Nuudelit ja possuwokki	c		possunsuikaleet,wok-kasvikset,nuudelit
+18	Lasagne	c		lasagnelevyt,jauheliha,tomaattimurska
+19	Falafelit & riisi	c	ve	falafelit,tzatsiki,riisiä
+20	Tortillat	c		tortillaletut,salsa,jauheliha,salaatti,tomaatti,juustoraaste
+21	Pasta & kanapekonikastike			kanapekoni,tomaattimurska,rucola,mozzarella
+22	Halloumisalaatti		k	halloumi,salaatti,tomaatti,mansikka
+23	Lihapullat & perunat	c		jauheliha,peruna
+24	Riisiä & härkistä		ve	riisiä,härkis,kasviksia
+25	Uunilohi & perunat			lohi,peruna
+26	Kanarisotto			riisiä,kanaa,kasviksia,sipuli
+27	Munakas		k	kananmuna,kasvikset,peruna
